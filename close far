@@ -1,0 +1,17 @@
+def close_far(a, b, c):
+  small = 0
+  large = 0
+  if abs(a-b) <= 1 or abs(a-c) <= 1:
+    if (abs(a-b) == abs(a-c)):
+      return False
+      
+    elif (abs(a-b) < abs(a-c)):
+      small = b
+      large = c
+    else:
+      small = c
+      large = b
+  if abs(small - large) >= 2 and abs(large - a) >=2:
+    return True
+  else:
+    return False
