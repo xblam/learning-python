@@ -1,0 +1,14 @@
+def larger(a,b):
+  result = ""
+  final = ""
+  while a and b > 0:
+    digit1 = a%10
+    digit2 = b%10
+    result += str(max(digit1,digit2))
+    a = a//10
+    b = b//10
+    
+
+  for i in range(len(result)):
+    final += result[len(result)-i-1]
+  print(final)
